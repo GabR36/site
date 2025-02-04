@@ -1,0 +1,65 @@
+baseURL = "https://gabch.top/"
+languageCode = "pt-br"
+theme = "smigle"
+title = "Empty House"
+
+[[menu.main]]
+identifier = "home"
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+identifier = "about"
+name = "Sobre"
+url = "/sobre/"
+weight = 2
+
+[[menu.main]]
+identifier = "posts"
+name = "Posts"
+url = "/posts/"
+weight = 3
+
+[[menu.main]]
+identifier = "autores"
+name = "Autores"
+url = "/authors/"
+weight = 4
+
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 5
+
+[[menu.main]]
+identifier = "rss"
+name = "RSS"
+url = "/index.xml"
+
+weight = 6
+
+[params]
+description = "Opiniões"
+abbrDateFmt = "Jan 2"
+brandIconFile = "imagens/empty-house.webp"
+dateFmt = "02-01-2006"
+subtitle = "Opiniões"
+  
+  [[params.social]]
+  name = "GitHub"
+  url = "https://github.com/GabR36"
+
+[author]
+  [author.gabriel_chuede]
+    name = "Gabriel Chuede"
+    email = "gabrielbchuede@gmail.com"
+  [author.teste]
+    name = "teste jr"
+    email = "test@gmail.com"
+
+[taxonomies]
+  tag = 'tags'
+  author = 'authors'
+  

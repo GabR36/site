@@ -1,0 +1,25 @@
+{{ $title := .Title | lower }}
+{{ with .Title }}<h1>{{ . }}</h1>{{ end }}
+<ul id="terms">
+  {{ range $key, $value := .Data.Terms.ByCount }}
+  {{ if ($value.Name) }}
+  <li class="term">
+    <a
+      href="{{ "authors_page" | relURL }}/{{ $value.Name | urlize }}"
+      >
+      {{ if (compare.Eq $title "authors") }}
+      {{ $author := index $.Site.Author ($value.Name) }}
+      <span> {{ $author.Name }} </span>
+      {{ else }}
+      <span>{{ $value.Name }}</span>
+      {{ end }}
+      <span> ({{ $value.Count }})</span>
+    </a>
+    <a
+      href="{{ $title | relURL }}/{{ $value.Name | urlize }}">
+      Posts
+      </a>
+  </li>
+  {{ end }}
+  {{ end }}
+</ul>

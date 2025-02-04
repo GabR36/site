@@ -1,0 +1,7 @@
+{{ define "main" }}
+<main id="authors">
+  {{ $author := index .Site.Author (.Title | lower) }}
+  <h1>{{ "Autores: " }}{{ $author.name }}</h1>
+  {{ partial "postsByDate.html" . }}
+</main>
+{{ end }}

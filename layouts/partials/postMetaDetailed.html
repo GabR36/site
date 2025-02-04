@@ -1,0 +1,39 @@
+<div class="post-meta">
+  <strong>
+    <span>Postado em</span>
+    <time>{{ .Date.Format (default "2006-01-02 15:04:05" .Site.Params.dateFmt) }}</time>
+    {{ with .Params.categories }}<span>in</span>{{ end }}
+    {{ range $key, $value := .Params.categories -}}
+      {{- if $key }}, {{ end }}
+      <a href="{{ "/categories/" | relLangURL }}{{ $value | urlize }}">{{ . }}</a>
+    {{- end }}
+  </strong>
+  {{ with .WordCount }}<span> • {{ . }} palavras</span>{{ end }}
+  {{ with .ReadingTime}}<span> • {{ . }} minutos de leitura</span>{{ end }}
+  {{ if and .IsPage (ne .Date .Lastmod) }}
+    <div>
+      Última vez modificado em
+      <time>{{ .Lastmod.Format (default "2006-01-02 15:04:05" .Site.Params.dateFmt) }}</time>
+    </div>
+  {{ end }}
+  {{ with .Params.tags }}
+    <div>
+      <span>Tags:</span>
+      {{ range $key, $value := . }}
+        {{- if $key }}, {{ end }}
+        <a href="{{ "/tags/" | relLangURL }}{{ $value | urlize }}">{{ . }}</a>
+      {{- end }}
+    </div>
+    {{ end }}
+    <div>
+      {{ with .Params.authors }}
+      <span>Autores:</span>
+      {{ range $key, $value := . }}
+      {{ $author := index $.Site.Author ($value) }}
+      <a
+	href="{{ "authors_page" | relURL }}/{{ $value | urlize }}"
+	>{{ $author.Name }}</a>
+      {{ end }}
+      {{ end }}
+    </div>
+</div>
