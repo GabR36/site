@@ -47,7 +47,7 @@ brandIconFile = "imagens/empty-house.webp"
 dateFmt = "02-01-2006"
 subtitle = "Opiniões"
   
-  [[params.social]]
+[[params.social]]
   name = "GitHub"
   url = "https://github.com/GabR36"
 
