@@ -55,9 +55,9 @@ subtitle = "Opiniões"
   [author.gabriel_chuede]
     name = "Gabriel Chuede"
     email = "gabrielbchuede@gmail.com"
-  [author.teste]
-    name = "teste jr"
-    email = "test@gmail.com"
+  [author.rafael_chuede]
+    name = "Rafael Bormann Chuede"
+    email = "rafaelbormannc@gmail.com"
 
 [taxonomies]
   tag = 'tags'

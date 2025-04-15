@@ -64,3 +64,5 @@ Rode o comando e em seguida "yes".\
 ## FIM
 
 Você já pode abrir sua DAW(primeiro confira se o QJackCtl está ativado) e gravar usando sua interface sem delay.
+
+[Veja como usar plugins vst no linux!](/posts/vst-plugins-no-linux)

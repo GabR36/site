@@ -91,7 +91,7 @@ https://drive.google.com/file/d/1EFpMlxQpj3h08xGblwz9VqA5XLH2EXEz/view?usp=shari
 O pacote zip ja contém um keygen para ativar a versão com todos os amplificadores do amplitube, sinta-se livre para usar.
 Para instalar o amplitube baixado apenas extraia o conteúdo e execute o arquive amplitube.exe abrindo ele com o Wine, e siga a instalação como se estivesse no windows.
 
-Depois de instalar você vai precisar passar a pasta em que o amplitube foi instalado para o yabridge, se você instalou de forma padrão a pasta deve ser: "/home/rafael/.wine/drive_c/Program Files/VstPlugIns/" e deve conter o arquivo "Amplitube4.dll", se tudo estiver certo apenas passe este diretório com 
+yDepois de instalar você vai precisar passar a pasta em que o amplitube foi instalado para o yabridge, se você instalou de forma padrão a pasta deve ser: "/home/rafael/.wine/drive_c/Program Files/VstPlugIns/" e deve conter o arquivo "Amplitube4.dll", se tudo estiver certo apenas passe este diretório com 
 ```
 yabridgectl add "/home/rafael/.wine/drive_c/Program Files/VstPlugIns/"
 ```
