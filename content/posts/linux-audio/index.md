@@ -2,7 +2,7 @@
 title = 'Configurando linux para produção de áudio'
 date = 2025-04-14T22:39:55-03:00
 description = 'Passo a passo da configuração do Linux Mint e Debian para gravar e produzir áudio'
-tags = ['linux', 'audio', 'debian', 'mint', 'vst', 'jack']
+tags = ['linux', 'audio', 'guia']
 draft = false
 authors = ['rafael_chuede']
 +++

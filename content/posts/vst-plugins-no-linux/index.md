@@ -2,7 +2,7 @@
 title = 'Usando Amplitube e VST com linux!'
 date = 2025-04-15T10:42:01-03:00
 description = 'Guia para usar plugins vst do Windows no linux, mais especificamente o Amplitube'
-tags = ['linux','vst','windows','amplitube']
+tags = ['linux', 'audio', 'guia']
 draft = false
 authors = ['rafael_chuede']
 +++
