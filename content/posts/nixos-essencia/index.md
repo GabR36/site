@@ -72,7 +72,7 @@ Acho que a grande tecnologia que possibilitou essas qualidades
 incríveis é o hash de diretórios de arquivos, parecido com o que faz o
 git. O NixOS usa isso para ter versões diferentes para cada
 modificação, seja por versão, flags de compilação, etc. de um mesmo
-programa[6]. Então os pacotes nix são descrições de como obter o código
+programa[^dolstra 2024]. Então os pacotes nix são descrições de como obter o código
 fonte, como compilar, quais programas são dependências de compilação,
 quais são dependências de run-time. E fazer um hash do resultado disso
 (que será um diretório com binários, includes, libs, etc.). Desse modo
@@ -93,14 +93,14 @@ não estão disponíveis no gerenciador de pacotes nix em outras distros
 (por isso você não consegue declarar configurações nesse tipo de
 instalação, e portanto quem diz que o gerenciador de pacotes e a
 distribuição são iguais está redondamente enganado), e são gerenciados
-pelo systemd[3]. Você vai ter que escrever ou usar
+pelo systemd[^install /var discourse]. Você vai ter que escrever ou usar
 um nix module se quiser que seu programa seja declarativo nas
-configurações e rode serviços no sistema[4].
+configurações e rode serviços no sistema[^modules nixwiki].
 
 Outro ponto importante no funcionamento do Nix é que ele usa links
 simbólicos para que você consiga escolher quais programas usar,
 importante quando diferentes versões do mesmo programa estão em
-conflito (ambas usam o mesmo nome de binário)[7][8][9].
+conflito (ambas usam o mesmo nome de binário)[^how nix works][^multiple versions reddit][^env discourse].
 
 E por último gostaria de esclarecer o por que de o NixOS ter canais
 estáveis e instáveis, sendo que ele pode instalar diferentes versões
@@ -108,7 +108,7 @@ ao mesmo tempo e se der ruim é só voltar. O sentido reside no fato de
 que Instavel e Estável é menos por questão de dependency hell e mais
 para não precisar lidar com mudanças de comportamento, configuração
 que ocorrem em atualizações, daí o estável 'não tem' atualizações e o
-instável tem [1]. Isso é mais útil para servidores (e nem tanto também
+instável tem [^stable chan]. Isso é mais útil para servidores (e nem tanto também
 como discuto adiante).
 
 ## Problemas
@@ -116,7 +116,7 @@ como discuto adiante).
 Apesar de poder ter várias versões de programas em seu repositório, o
 que acontece é que ele normalmente tem apenas uma, ou algumas a mais
 em programas importantes, e isso acontece porque manter diversas
-versões funcionando é difícil[1][2], principalmente porque o próprio
+versões funcionando é difícil[^stable chan][^one version discourse], principalmente porque o próprio
 desenvolvedor não dá suporte mais as versões antigas, então não dá
 para manter uma versão que pode estar com problemas de segurança nos
 repositórios (embora muitas alternativas como o docker façam isso, mas
@@ -127,7 +127,7 @@ e se tem planos do NixOS em torná-los oficiais, mas em minha opinião,
 são apenas uma gambiarra que deve ser usada somente em último
 caso. Eles funcionam pinando uma versão do repositório de pacotes (por
 commit, tag, etc.), de modo que a versão do pacote desejado esteja
-disponível[5]. Porém, isso também incorre nos erros que fizeram os
+disponível[^flakes config]. Porém, isso também incorre nos erros que fizeram os
 mantenedores não manterem as versões em primeiro lugar: a ausência de
 suporte dos desenvolvedores.
 
@@ -181,21 +181,21 @@ Enfim, use NixOS ou use Arch Linux (ou outro rolling release).
 
 ## Referências
 
-[1] Isn’t the point of Nix not to need stable channels? Disponível em: <https://discourse.nixos.org/t/isnt-the-point-of-nix-not-to-need-stable-channels/57385/9>. Acesso em: 15 dez. 2024. 
+[^stable chan]: Isn’t the point of Nix not to need stable channels? Disponível em: <https://discourse.nixos.org/t/isnt-the-point-of-nix-not-to-need-stable-channels/57385/9>. Acesso em: 15 dez. 2024. 
 
-[2] Why is there only one version in nixpkgs? - Development / Nixpkgs Architecture. Disponível em: <https://discourse.nixos.org/t/why-is-there-only-one-version-in-nixpkgs/47773>. Acesso em: 21 dez. 2024. 
+[^one version discourse]: Why is there only one version in nixpkgs? - Development / Nixpkgs Architecture. Disponível em: <https://discourse.nixos.org/t/why-is-there-only-one-version-in-nixpkgs/47773>. Acesso em: 21 dez. 2024. 
 
-[3] How to install /var - Help. Disponível em: <https://discourse.nixos.org/t/how-to-install-var/58040/19>. Acesso em: 31 dez. 2024. 
+[^install /var discourse]: How to install /var - Help. Disponível em: <https://discourse.nixos.org/t/how-to-install-var/58040/19>. Acesso em: 31 dez. 2024. 
 
-[4] NixOS modules - NixOS Wiki. Disponível em: <https://nixos.wiki/wiki/NixOS_modules>. Acesso em: 22 fev. 2025. 
+[^modules nixwiki]: NixOS modules - NixOS Wiki. Disponível em: <https://nixos.wiki/wiki/NixOS_modules>. Acesso em: 22 fev. 2025. 
 
-[5] flake.nix Configuration Explained. Disponível em: <https://nixos-and-flakes.thiscute.world/nixos-with-flakes/nixos-flake-configuration-explained>. Acesso em: 16 dez. 2024. 
+[^flakes config]: flake.nix Configuration Explained. Disponível em: <https://nixos-and-flakes.thiscute.world/nixos-with-flakes/nixos-flake-configuration-explained>. Acesso em: 16 dez. 2024. 
 
-[6] DOLSTRA, E.; DE JONGE, M.; VISSER, E. Nix: A Safe and Policy-Free
+[^dolstra 2024]: DOLSTRA, E.; DE JONGE, M.; VISSER, E. Nix: A Safe and Policy-Free
 System for Software Deployment. 2004.
 
-[7] How Nix Works | Nix & NixOS. Disponível em: <https://nixos.org/guides/how-nix-works/>. Acesso em: 30 jun. 2024. 
+[^how nix works]: How Nix Works | Nix & NixOS. Disponível em: <https://nixos.org/guides/how-nix-works/>. Acesso em: 30 jun. 2024. 
 
-[8] EMERGENCY_APRICOT_77. How do multiple versions of the package internally work? r/NixOS, 2 jul. 2023. Disponível em: <www.reddit.com/r/NixOS/comments/14ogcqh/how_do_multiple_versions_of_the_package/>. Acesso em: 13 dez. 2024
+[^multiple versions reddit]: EMERGENCY_APRICOT_77. How do multiple versions of the package internally work? r/NixOS, 2 jul. 2023. Disponível em: <www.reddit.com/r/NixOS/comments/14ogcqh/how_do_multiple_versions_of_the_package/>. Acesso em: 13 dez. 2024
 
-[9] Nix-env : how i can install two differents versions of the same software inside a user - Help. Disponível em: <https://discourse.nixos.org/t/nix-env-how-i-can-install-two-differents-versions-of-the-same-software-inside-a-user/3490>. Acesso em: 13 dez. 2024. 
+[^env discourse]: Nix-env : how i can install two differents versions of the same software inside a user - Help. Disponível em: <https://discourse.nixos.org/t/nix-env-how-i-can-install-two-differents-versions-of-the-same-software-inside-a-user/3490>. Acesso em: 13 dez. 2024. 
