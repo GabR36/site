@@ -56,7 +56,7 @@
       {{ with .Params.authors }}
       <span>Autores:</span>
       {{ range $key, $value := . }}
-      {{ $author := index $.Site.Author ($value) }}
+      {{ $author := index $.Site.Params.Author ($value) }}
       <a
 	href="{{ "authors_page" | relURL }}/{{ $value | urlize }}"
 	>{{ $author.Name }}</a>

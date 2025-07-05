@@ -51,15 +51,15 @@ subtitle = "Opiniões"
   name = "GitHub"
   url = "https://github.com/GabR36"
 
-[author]
-  [author.gabriel_chuede]
-    name = "Gabriel Chuede"
-    email = "gabrielbchuede@gmail.com"
-  [author.rafael_chuede]
-    name = "Rafael Bormann Chuede"
-    email = "rafaelbormannc@gmail.com"
+
+[params.author.gabriel_chuede]
+name = "Gabriel Chuede"
+email = "gabrielbchuede@gmail.com"
+[params.author.rafael_chuede]
+name = "Rafael Bormann Chuede"
+email = "rafaelbormannc@gmail.com"
 
 [taxonomies]
-  tag = 'tags'
-  author = 'authors'
+tag = 'tags'
+author = 'authors'
   

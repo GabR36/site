@@ -5,7 +5,7 @@
   {{ if ($value.Name) }}
   <li class="term">
     {{ if (compare.Eq $title "authors") }}
-    {{ $author := index $.Site.Author ($value.Name) }}
+    {{ $author := index $.Site.Params.Author ($value.Name) }}
     <a
       href="{{ "authors_page" | relURL }}/{{ $value.Name | urlize }}"
       >
