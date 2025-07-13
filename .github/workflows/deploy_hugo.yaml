@@ -33,7 +33,7 @@ jobs:
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
-        run: hugo && ls
+        run: hugo --cleanDestinationDir
       - run: sudo apt-get install rsync
       - run: ls
       - name: Deploy to VPS
