@@ -42,3 +42,8 @@ gabrielbchuede@gmail.com
 
 Geralmente leio e respondo meus e-mails somente uma vez ao dia, pela
 manhã.
+
+## Redes
+
+- [Github](https://github.com/GabR36/)
+- [Last.fm](https://www.last.fm/user/gabr369)
