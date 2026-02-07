@@ -1,6 +1,6 @@
 Site estático feito com o [Hugo framework](https://gohugo.io/)
 
-<https://gabch.top>
+<https://mentolog.top>
 
 ## Instruções para postar no site
 

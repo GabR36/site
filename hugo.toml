@@ -1,7 +1,7 @@
-baseURL = "https://gabch.top/"
+baseURL = "https://mentolog.top/"
 languageCode = "pt-br"
 theme = "smigle"
-title = "Empty House"
+title = "Mentolog"
 
 [[menu.main]]
 identifier = "home"
@@ -41,7 +41,7 @@ url = "/index.xml"
 weight = 6
 
 [params]
-description = "Opiniões"
+description = "Registro de pensamentos"
 abbrDateFmt = "Jan 2"
 brandIconFile = "imagens/empty-house.webp"
 dateFmt = "02-01-2006"
