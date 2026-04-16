@@ -213,6 +213,10 @@ pois, como eu disse, os mercados são minoritários e as pessoas
 simplesmente não ligam muito para o preço que colocam, e podem ficar
 "perdendo dinheiro e tempo" quase que infinitamente.
 
+> **Observação**
+> Fiz um programa para ajudar nos cálculos dos preços, mesmo que não se tenha
+> economia no minecraft ainda é útil para aprender sobre a economia da vida real: [https://github.com/GabR36/MinePriceCalc](https://github.com/GabR36/MinePriceCalc)
+
 ## Referências
 
 [^raichu]: JohnnyRaichu, Minecraft: Economics Ep 1: How much is Time worth?, (10 de maio de 2016). Acesso em: 13 de junho de 2024. Online Vídeo. Disponível em: https://www.youtube.com/watch?v=k8HDNGQIMQQ
