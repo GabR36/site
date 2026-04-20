@@ -25,7 +25,7 @@ existe hoje.
 
 E o outro problema: isso não diz nada sobre a nossa situação atual. Se
 deveriamos privatizar as coisas, se deveriamos respeitar a propriedade
-privada, se deveriamos empreender ou não. Isso por que a história da
+privada, se deveriamos empreender ou não. Isso porque a história da
 humanidade nunca ocorreu por esses meios de livre contratos e não
 violência. A história humana é marcada por guerras, violência e
 sobrevivência do mais forte. E basta ter um momento disso para toda a
@@ -36,9 +36,21 @@ aplicação de violação do PNA e retornar ao mundo "justo". Então toda a
 teoria se torna inútil.
 
 Ninguém diria que uma sociedade onde todas as fontes de água foram
-violentamente tomadas por um grupo de pessoas é justa se a partir de
-agora todos respeitarem sua propriedade privada e ninguém mais usar
+violentamente tomadas por um grupo de pessoas é justa se, a partir de
+agora, todos respeitarem sua propriedade privada e ninguém mais usar
 violência só livres contratos entre os agentes.
+
+Mesmo que se admita a impossibiliadade de julgar toda a história
+humana, e se faça uma divisão igualitária das coisas e, a partir daí,
+se aplique a teoria, ainda voltaria para o ponto de que tudo pode ser
+feito usando essa teoria, até as posições aparentemente mais
+contraditórias.
+
+Isso mostra que os conceitos muito gerais são verdadeiros até em
+situações consideradas erradas (as pessoas ainda estariam se
+beneficiando mutuamente pelas trocas), e ao mesmo tempo se referem a
+situações impossíveis (só se julgassemos a história humana inteira
+poderiamos voltar a uma situação "livre").
 
 Se é falado sobre um humano abstrato. Sobre qualidades que um humano
 tem independente do tempo e do espaço em que ele se localiza, coisas
@@ -47,6 +59,8 @@ satisfação". Ao invés de falar das possibilidades humanas no agora,
 como, se o humano vive numa cidade ou no interior, se ele tem dinheiro
 para fazer algo algo ou não.
 
+Deduzir toda a história humana a partir das capacidades humanas... 
+
 Portanto não devemos dizer que eles estão errados, apenas que são
 inúteis. não respondem nada, não explicam nada, não ajudam em
 nada. Sim, está certo que pessoas agem, que as pessoas buscam o melhor
@@ -54,15 +68,6 @@ para elas, que vendas e compras são escolhas livres e beneficiam os
 dois lados. Isso ainda assim não diz nada sobre o que devemos
 fazer. Devemos analisar as estruturas específicas que essas concepções
 gerais fornecem.
-
-O ponto é falar sobre as estruturas específicas e discutir se elas são
-boas ou não, não ficar na abstração. Por exemplo, ao invés de se
-criticar o governo por que poderia ser privado, deveria-se criticar o
-uso de recursos do governo, ou ao invés de falar que a saúde deveria
-ser privada deveria-se dizer que precisa de mais hospitais, com
-estrutura específica X. Ao invés de critiar o Público, criticar a
-centralização dos recursos e do comando. Público e privado são apenas
-duas palavras muito abstratas que até servem para designar coisas mas
 
 ## Religião
 
