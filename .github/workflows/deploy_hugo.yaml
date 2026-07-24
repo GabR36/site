@@ -19,9 +19,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.131.0
+      HUGO_VERSION: "0.131.0"
     steps:
       - uses: actions/checkout@v4
+      - run: tree -L 2
       
       - name: Hugo-Site
         uses: chabad360/hugo-actions@v2
