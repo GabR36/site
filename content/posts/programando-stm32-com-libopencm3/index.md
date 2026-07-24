@@ -2,32 +2,45 @@
 title = 'Programando STM32 Com Libopencm3'
 date = 2026-07-23T16:19:12-03:00
 description = 'Aprenda a usar qualquer IDE da sua escolha para programar STM32 usando uma HAL código aberto, muito melhor que a do fabricante.'
-tags = ['programação']
-draft = false
+tags = ['programacao']
+draft = true
 authors = ['rafael_chuede']
 +++
 
+![MCUs](mcus.jpg)
+
 # Introdução / Problemática e Justificativa
 
-Se você já programou alguma coisa para os microcontroladores da família STM32, já com certeza teve o desprazer de utilizar a IDE do fabricante, que além de lenta, poluída e cheia de bloatware, também necessita de login para funcionar. Nos primeiros instantes de uso o usuário ja é alertado que deve baixar as atualizações e pacotes sendo necessário a conexão com internet e login, o qual simplesmente não entra, você precisa ser um monge budista para não querer quebrar a tela do PC ao tentar configurar essa IDE... Enfim essas são apenas algumas reclamações sobre a CubeIDE, eu poderia ficar aqui escrevendo o dia todo sobre as inconveniências do programa, como os *bilhões de comentários* no *código gerado* pela IDE em todos os projetos e a praticamente obrigação do uso do CubeMX, um programa com Interface Gráfica onde o usuario usa o mouse para setar os periféricos, clocks e qualquer coisa no desenho do chip STM32...
+Se você já programou alguma coisa para os microcontroladores da família STM32, já teve com certeza teve o desprazer de utilizar a IDE do fabricante, que além de lenta, poluída e cheia de bloatware, também necessita de login para funcionar. Nos primeiros instantes de uso o usuário ja é alertado que deve baixar as atualizações e pacotes sendo necessário a conexão com internet e login, o qual simplesmente não entra, você precisa ser um monge budista para não querer quebrar a tela do PC ao tentar configurar essa IDE... Enfim essas são apenas algumas reclamações sobre a CubeIDE, eu poderia ficar aqui escrevendo o dia todo sobre as inconveniências do programa, como os *bilhões de comentários* no *código gerado* pela IDE em todos os projetos e a praticamente obrigação do uso do CubeMX, um programa com Interface Gráfica onde o usuario usa o mouse para setar os periféricos, clocks e qualquer coisa no desenho do chip STM32...
+
+![STCubeIDE](cubeide.jpg)
 
 Agora que o meu ódio com a IDE do fabricante foi destilado, posso introduzir sobre o que é a libopencm3. Libopencm3 trata-se de uma HAL(Hardware Abstraction Layer) que permite programar um monte  de microcontroladores ARM sem utilizar números mágicos(registradores), apenas com funções abstraídas você pode controlar todas as utilidades do MCU, como utilizar I2C com display, SPI, I2S, DMA, Interrupções, ou piscar um led. A libopencm3 é código aberto o que significa que nunca vai deixar de existir ou mudar drasticamente invibializando seu uso e o melhor de tudo *você pode usar qual IDE quiser*.
 
 
 # Como começar a usar
 
-Para programar usando libopencm3 existem vários jeitos, mas vou ensinar o jeito que eu faço, é muito simples, basta clonar esse template de código com submodulos ativos para que ja baixe tambem a libopencm3 dentro do repositório.
+1. Para programar usando libopencm3 existem vários jeitos, mas vou ensinar o jeito que eu faço, é muito simples, primeiro instale as dependencias básicas para compilar e flashar o codigo no STM32:
+
+- make
+- git
+- gcc-arm-none-eabi
+- stlink-tools
+
+Deve ser fácil achar todas essas dependências no repositório da sua distro, se não achar você pode instalar procurando na internet mas eu não recomendo.
+
+2. Após instalar as dependências, você deve criar o diretório com a biblioteca e os Makefiles para facilitar a junção e compilação de tudo, acredito que o jeito mais fácil é clonar esse template de código com submodulos ativos para que ja baixe tambem a libopencm3 dentro do repositório.
 ```
 git clone --recurse-submodules https://github.com/libopencm3/libopencm3-template.git
 ```
 
-depois dentro do repositorio libopencm3-template, entre no diretorio do libopencm3 e compile tudo com ``make`` ou apenas a família ARM que for utilizar, nesse caso F1 e F4:
+3. depois dentro do repositorio libopencm3-template, entre no diretorio do libopencm3 e compile tudo com ``make`` ou apenas a família ARM que for utilizar, nesse caso F1 e F4:
 
 ```
 cd libopencm3/ && make TARGETS='stm32/f1 stm32/f4'
 ```
 
-Depois apenas volte para o root do repositório e entre no diretório 'my-project' e edite o Makefile para gerar os linkers certos do seu STM32. Apenas edite a linha DEVICE=stm32f407vgt6 para DEVICE=stm32f411re ou qualquer modelo e se quiser exclua as linhas `` CFILES += api.c AFILES += api-asm.S ``, agora você ja pode escrever seu código em my-project.c e compilar com `make` mas eu editaria tambem o nome do arquivo que será compilado: ``PROJECT = awesomesauce `` para um nome mais especifico do seu projeto, e eu sempre coloco uma regra para facilitar o flash do programa no STM32, adicionando: 
+4. Depois apenas volte para o root do repositório e entre no diretório 'my-project' e edite o Makefile para gerar os linkers certos do seu STM32. Apenas edite a linha DEVICE=stm32f407vgt6 para DEVICE=stm32f411re ou qualquer modelo e se quiser exclua as linhas `` CFILES += api.c AFILES += api-asm.S ``, agora você ja pode escrever seu código em my-project.c e compilar com `make` mas eu editaria tambem o nome do arquivo que será compilado: ``PROJECT = awesomesauce `` para um nome mais especifico do seu projeto, e eu sempre coloco uma regra para facilitar o flash do programa no STM32, adicionando: 
 ``
 flashbin:
 st-flash write main.bin 0x8000000
@@ -57,7 +70,7 @@ flashbin:
 
 ```
 
-Para começar você pode editar my-project.c para esse exemplo de blink led seestiver usando uma placa stm32f411 como eu:
+Para começar você pode editar my-project.c para esse exemplo de blink led se estiver usando uma placa stm32f411 como eu:
 ```
 #include <libopencm3/stm32/rcc.h>
 #include <libopencm3/stm32/gpio.h>
@@ -118,6 +131,11 @@ https://github.com/rbmannchued/libopencm3-examples/
 Vale a pena dar uma olhada.
 
 # Conclusão
-Na minha humilde opinião a adoção da libopencm3 ao inves da ST hal e IDEs do fabricante são muito vantajosas, você se livra de qualquer software proprietário e das amarras do sistemas e ainda de quebra aprende melhor o que está fazendo, visto que a libopencm3 é menos abstraída. 
+Na minha opinião a adoção da libopencm3 ao inves da ST hal e IDEs do fabricante são muito vantajosas, você se livra de qualquer software proprietário e das amarras do sistemas e ainda de quebra aprende melhor o que está fazendo, visto que a libopencm3 é menos abstraída. 
 
 Você conseguirá desenvolver desde projetos mais simples a extraordinariamente complexos, eu mesmo já tenho vários projetos parrudos e mais complexos escritos com libopencm3, além de drivers e bibliotecas para facilitar a vida utilizando, por exemplo displays(https://github.com/rbmannchued).
+
+
+# E no Windows?
+
+Deve existir algum jeito de fazer funcionar em ambiente windows (acredito que o livro mencionado anteriormente explica) mas eu recomendo fortemente usar linux para programar STM32 e para todo o resto também :)
