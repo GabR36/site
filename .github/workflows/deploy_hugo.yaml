@@ -21,6 +21,8 @@ jobs:
     env:
       HUGO_VERSION: 0.131.0
     steps:
+      - uses: actions/checkout@v4
+      
       - name: Hugo-Site
         uses: chabad360/hugo-actions@v2
         with:
