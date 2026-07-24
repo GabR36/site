@@ -3,7 +3,7 @@ title = 'Programando STM32 Com Libopencm3'
 date = 2026-07-23T16:19:12-03:00
 description = 'Aprenda a usar qualquer IDE da sua escolha para programar STM32 usando uma HAL código aberto, muito melhor que a do fabricante.'
 tags = ['programacao']
-draft = true
+draft = false
 authors = ['rafael_chuede']
 +++
 
