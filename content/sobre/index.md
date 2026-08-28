@@ -20,4 +20,4 @@ Siga o guia no meu Github [aqui](https://github.com/GabR36).
 
 Envie uma mensagem para o seguinte email:
 
-gabrielbchuede@gmail.com
+gabrielchuede.publico@gmail.com
