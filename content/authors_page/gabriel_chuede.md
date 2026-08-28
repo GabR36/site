@@ -38,7 +38,7 @@ Se tiver alguma dúvida, opinião sobre os artigos daqui, ou qualquer
 razão, sinta-se a vontade para me mandar um e-mail pelo seguinte
 endereço:
 
-gabrielbchuede@gmail.com
+gabrielchuede.publico@gmail.com
 
 Geralmente leio e respondo meus e-mails somente uma vez ao dia, pela
 manhã.
